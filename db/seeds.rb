@@ -16,6 +16,8 @@ category1.save()
 
 transaction1 = Transaction.new({'name' => 'Cleaning Supplies', 'amount' => 23.45, 'category_id' => category1.id, 'account_id' => account1.id})
 transaction1.save()
+transaction2 = Transaction.new({'name' => 'Food', 'amount' => 10.50, 'category_id' => category1.id, 'account_id' => account1.id})
+transaction2.save()
 
 binding.pry
 nil

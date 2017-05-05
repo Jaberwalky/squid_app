@@ -28,4 +28,9 @@ class Account
     SqlRunner.run(sql).map {|category| Category.new(category)}
   end
 
+  def transactions()
+    sql = "SELECT * FROM transactions WHERE account_id = #{@id};"
+    SqlRunner.run(sql).map {|transaction| Transaction.new(transaction)}
+  end
+
 end
