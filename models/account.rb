@@ -1,3 +1,5 @@
+require_relative '../db/sql_runner.rb'
+
 class Account
 
   attr_reader :id
