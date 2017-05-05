@@ -23,4 +23,9 @@ class Transaction
     SqlRunner.run(sql)
   end
 
+  def self.all()
+    sql = "SELECT * FROM transactions;"
+    SqlRunner.run(sql).map {|transaction| Transaction.new(transaction)}
+  end
+
 end

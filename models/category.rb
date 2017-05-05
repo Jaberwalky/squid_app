@@ -21,6 +21,10 @@ class Category
     SqlRunner.run(sql)
   end
 
+  def self.all()
+    sql = "SELECT * FROM categories;"
+    SqlRunner.run(sql).map {|category| Category.new(category)}
+  end
 
 
 end
