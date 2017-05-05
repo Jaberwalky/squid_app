@@ -1,4 +1,5 @@
 require_relative '../db/sql_runner.rb'
+require_relative 'transaction.rb'
 
 class Category
 
@@ -24,6 +25,11 @@ class Category
   def self.all()
     sql = "SELECT * FROM categories;"
     SqlRunner.run(sql).map {|category| Category.new(category)}
+  end
+
+  def transactions()
+    sql = "SELECT * FROM transactions WHERE category_id = #{@id};"
+    SqlRunner.run(sql).map{|transaction| Transaction.new(transaction)}
   end
 
 

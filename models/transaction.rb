@@ -28,4 +28,9 @@ class Transaction
     SqlRunner.run(sql).map {|transaction| Transaction.new(transaction)}
   end
 
+  def self.total()
+    sql = "SELECT SUM(amount) AS total FROM transactions;"
+    total = SqlRunner.run(sql).first["total"].to_f
+  end
+
 end
