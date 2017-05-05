@@ -4,6 +4,10 @@ require_relative '../models/transaction.rb'
 
 require 'pry-byebug'
 
+Transaction.delete_all()
+Account.delete_all()
+Category.delete_all()
+
 account1 = Account.new({'name' => 'Natwest Visa Debit', 'balance' => 712.50, 'image' => 'fake/image/filepath'})
 account1.save()
 

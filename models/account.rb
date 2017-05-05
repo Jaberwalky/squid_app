@@ -18,5 +18,9 @@ class Account
     @id = SqlRunner.run(sql).first()['id'].to_i
   end
 
+  def self.delete_all()
+    sql = "DELETE FROM accounts;"
+    SqlRunner.run(sql)
+  end
 
 end
