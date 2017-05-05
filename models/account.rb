@@ -13,5 +13,10 @@ class Account
     @username = ''
   end
 
+  def save()
+    sql = "INSERT INTO accounts (name, balance, image) VALUES ('#{name}', #{balance}, '#{image}') RETURNING *"
+    @id = SqlRunner.run(sql).first()['id'].to_i
+  end
+
 
 end

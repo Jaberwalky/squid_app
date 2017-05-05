@@ -18,7 +18,7 @@ CREATE TABLE categories (
 CREATE TABLE transactions (
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
-  amount NUMERIC(8,2)
+  amount NUMERIC(8,2),
   category_id INT4 references categories(id),
   account_id INT4 REFERENCES accounts(id)
 );

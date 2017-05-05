@@ -3,7 +3,7 @@ require_relative '../db/sql_runner.rb'
 class Category
 
   attr_reader :id
-  attr_accessor :name, :image,
+  attr_accessor :name, :image
 
   def initialize(params)
     @id = params['id'].to_i if params['id']
@@ -11,6 +11,10 @@ class Category
     @image = params['image']
   end
 
+  def save()
+    sql = "INSERT INTO categories (name, image) VALUES ('#{name}', '#{image}') RETURNING *;"
+    @id = SqlRunner.run(sql).first()['id'].to_i
+  end
 
 
 end
