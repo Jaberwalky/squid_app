@@ -33,4 +33,9 @@ class Account
     SqlRunner.run(sql).map {|transaction| Transaction.new(transaction)}
   end
 
+  def update()
+    sql = "UPDATE accounts SET name = '#{name}', balance = #{balance}, image = '#{image}' WHERE id = '#{@id}';"
+    SqlRunner.run(sql)
+  end
+
 end

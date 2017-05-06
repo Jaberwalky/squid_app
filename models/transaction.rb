@@ -1,5 +1,5 @@
 require_relative '../db/sql_runner.rb'
-
+require_relative 'account.rb'
 class Transaction
 
   attr_reader :id
@@ -31,6 +31,11 @@ class Transaction
   def self.total()
     sql = "SELECT SUM(amount) AS total FROM transactions;"
     total = SqlRunner.run(sql).first["total"].to_f
+  end
+
+  def update()
+    sql = "UPDATE transactions SET name = '#{name}', amount = #{amount}, category_id = #{category_id}, account_id = #{account_id} WHERE id = '#{@id}';"
+    SqlRunner.run(sql)
   end
 
 end
