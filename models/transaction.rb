@@ -38,4 +38,9 @@ class Transaction
     SqlRunner.run(sql)
   end
 
+  def category
+    sql = "SELECT * FROM categories WHERE id = '#{@category_id}'"
+    SqlRunner.run(sql).first
+  end
+
 end

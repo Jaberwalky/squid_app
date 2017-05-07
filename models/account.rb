@@ -38,4 +38,8 @@ class Account
     SqlRunner.run(sql)
   end
 
+  def add_money(amount)
+    @balance += amount
+  end
+
 end
