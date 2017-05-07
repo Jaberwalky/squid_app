@@ -1,7 +1,13 @@
-<h1>THIS HAS BEEN SUCCESSFUL</h1>
-
 <form action="/transactions" method="post">
-
-
+  <label for="trx-name">Name</label>
+  <input type="text" id="trx-name" name="name">
+  <label for="cost">Amount</label>
+  <input type="number" id="cost" name="amount">
+  <label for="cat">Category</label>
+  <select id="cat" name="category">
+    <% @categories.each do |category| %>
+      <option value="<%=category.id%>"><%=category.name%></option>
+    <% end %>
+  </select>
   <input type='submit' value="Save">
 </form>
