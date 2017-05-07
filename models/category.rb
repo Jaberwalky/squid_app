@@ -37,5 +37,9 @@ class Category
     SqlRunner.run(sql).map{|transaction| Transaction.new(transaction)}
   end
 
-
+  def total()
+    sql = "SELECT SUM(amount) AS total FROM transactions WHERE category_id = #{@id};"
+    total = SqlRunner.run(sql).first["total"].to_f
+  end
+  
 end
