@@ -1,10 +1,8 @@
 require 'sinatra'
 require 'sinatra/contrib/all'
-require_relative 'models/transaction.rb'
-require_relative 'models/account.rb'
-require_relative 'models/category.rb'
+require_relative 'controllers/transactions_controller.rb'
 
-get '/' do
+get '/squid' do
   @transactions = Transaction.all()
   erb(:index)
 end
