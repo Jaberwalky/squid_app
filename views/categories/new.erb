@@ -1,5 +1,13 @@
 <h1>add a new category</h1>
 <form action="/categories" method="post">
+  <label for="name_field">Name</label>
+  <input type="text" id="name_field" name="name">
+
+
+  <% @spare_images.each do |image| %>
+  <input type="radio" name="image" value=image><img src="<%=image%>"><br>
+
+  <% end %>
 
 
   <input type='submit' value="Save">

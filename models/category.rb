@@ -12,6 +12,11 @@ class Category
     @image = params['image']
   end
 
+  def self.all()
+    sql = "SELECT * FROM categories;"
+    SqlRunner.run(sql).map {|category| Category.new(category)}
+  end
+
   def save()
     sql = "INSERT INTO categories (name, image) VALUES ('#{name}', '#{image}') RETURNING *;"
     @id = SqlRunner.run(sql).first()['id'].to_i
