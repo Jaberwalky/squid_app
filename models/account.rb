@@ -24,8 +24,8 @@ class Account
   end
 
   def self.all()
-    sql = "SELECT * FROM categories;"
-    SqlRunner.run(sql).map {|category| Category.new(category)}
+    sql = "SELECT * FROM accounts;"
+    SqlRunner.run(sql).map {|account| Account.new(account)}
   end
 
   def transactions()

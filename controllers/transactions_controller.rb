@@ -6,12 +6,15 @@ require_relative '../models/account.rb'
 
 get '/transactions/new' do
   @categories = Category.all()
+  @accounts = Account.all()
   erb(:"transactions/new")
 end
 
-# post '/transactions' do
-#
-# end
+post '/transactions' do
+  transaction = Transaction.new(params)
+  transaction.save()
+  redirect ('/squid')
+end
 
 post '/transactions/:id/delete' do
   Transaction.delete_at_id(params[:id])
