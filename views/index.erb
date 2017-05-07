@@ -6,6 +6,7 @@
       <th>Tag</th>
       <th>Transaction</th>
       <th>Amount</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -14,6 +15,11 @@
       <td><%=transaction.category['image']%></td>
       <td><%=transaction.name%></td>
       <td><%=transaction.amount%></td>
+      <td>
+        <form action="/transactions/<%=transaction.id%>/delete" method="POST">
+        <input type="submit" value="delete" />
+        </form>
+      </td>
     </tr>
     <% end %>
   </tbody>
