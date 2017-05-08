@@ -41,5 +41,11 @@ class Category
     sql = "SELECT SUM(amount) AS total FROM transactions WHERE category_id = #{@id};"
     total = SqlRunner.run(sql).first["total"].to_f
   end
-  
+
+  def self.find(id_to_find)
+    sql = "SELECT * FROM categories WHERE id = #{id_to_find}"
+    hash = SqlRunner.run(sql).first
+    return Category.new(hash)
+  end
+
 end

@@ -13,6 +13,10 @@ class Account
     @username = ''
   end
 
+  def formatted_balance
+    sprintf("%.2f", @balance)
+  end
+
   def save()
     sql = "INSERT INTO accounts (name, balance, image) VALUES ('#{name}', #{balance}, '#{image}') RETURNING *"
     @id = SqlRunner.run(sql).first()['id'].to_i
@@ -34,7 +38,7 @@ class Account
   end
 
   def update()
-    sql = "UPDATE accounts SET name = '#{name}', balance = #{balance}, image = '#{image}' WHERE id = '#{@id}';"
+    sql = "UPDATE accounts SET name = '#{name}', balance = #{@balance}, image = '#{image}' WHERE id = '#{@id}';"
     SqlRunner.run(sql)
   end
 

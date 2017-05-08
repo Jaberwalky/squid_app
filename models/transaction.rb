@@ -13,6 +13,10 @@ class Transaction
     @account_id = params['account_id'].to_i
   end
 
+  def formatted_amount
+    sprintf("%.2f", @amount)
+  end
+
   def save()
     sql = "INSERT INTO transactions (name, amount, category_id, account_id) VALUES ('#{name}', #{amount}, #{category_id}, #{account_id}) RETURNING *"
     @id = SqlRunner.run(sql).first()['id'].to_i

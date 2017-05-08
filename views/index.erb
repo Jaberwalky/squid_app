@@ -1,14 +1,20 @@
 <section>
-<!-- card buttons -->
-<!-- default button to show all accounts -->
+  <%@accounts.each do |account| %>
+    <h3><%=account.formatted_balance%></h3>
+    <p><%=account.name%></p>
+    <a href="/accounts/<%=account.id%>"><input type="button" value="Add Funds"></a>
+  <%end%>
 </section>
 
 <section>
   <% @categories.each do |category| %>
-    <h3><%=category.total()%></h3>
-    <img src=<%=category.image%>>
-    <p><%=category.name%></a>
+    <a href="/categories/<%=category.id%>">
+      <h3><%=category.total()%></h3>
+      <img src=<%=category.image%>>
+      <p><%=category.name%></a>
+    </a>
   <% end %>
+  <a href="/categories/new"><input type="button" value="Add Category"></a>
 </section>
 
 <aside>
@@ -26,7 +32,7 @@
       <tr>
         <td><img src="<%=transaction.category['image']%>"</td>
         <td><%=transaction.name%></td>
-        <td><%=transaction.amount%></td>
+        <td><%=transaction.formatted_amount%></td>
         <td>
           <form action="/transactions/<%=transaction.id%>/delete" method="POST">
           <input type="submit" value="delete" />
@@ -42,7 +48,5 @@
       <td><%= Transaction.total %></td>
     </tfoot>
   </table>
-
-  <a href="/categories/new"><input type="button" value="Add Category"></a>
   <a href="/transactions/new"><input type="button" value="Add Transaction"></a>
 </aside>

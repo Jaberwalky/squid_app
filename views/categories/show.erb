@@ -1,0 +1,36 @@
+
+
+<section>
+  <% @categories.each do |category| %>
+    <a href="/categories/<%=category.id%>">
+      <h3><%=category.total()%></h3>
+      <img src=<%=category.image%>>
+      <p><%=category.name%></a>
+    </a>
+  <% end %>
+  <a href="/categories/new"><input type="button" value="Add Category"></a>
+</section>
+
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Transaction</th>
+      <th>Amount</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @transactions.each do |transaction| %>
+      <tr>
+        <td><%=transaction.name%></td>
+        <td><%=transaction.formatted_amount%></td>
+        <td></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%=@category.total%>
