@@ -46,4 +46,15 @@ class Account
     @balance += amount
   end
 
+  def self.delete_at_id(id_to_delete)
+    sql = "DELETE FROM accounts WHERE id = #{id_to_delete}"
+    SqlRunner.run(sql)
+  end
+
+  def self.find(id_to_find)
+    sql = "SELECT * FROM accounts WHERE id = #{id_to_find}"
+    hash = SqlRunner.run(sql).first
+    return Account.new(hash)
+  end
+
 end

@@ -8,7 +8,7 @@ Transaction.delete_all()
 Account.delete_all()
 Category.delete_all()
 
-account1 = Account.new({'name' => 'Natwest Visa Debit', 'balance' => 712.50, 'image' => 'fake/image/filepath'})
+account1 = Account.new({'name' => 'Natwest Visa Debit', 'balance' => 712.50, 'image' => '/images/card1.png'})
 account1.save()
 
 category1 = Category.new({'name' => 'Fashion', 'image' => '/images/fashion.png'})

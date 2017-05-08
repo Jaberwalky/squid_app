@@ -7,10 +7,6 @@ get '/categories/new' do
   erb(:"categories/new")
 end
 
-get '/categories' do
-
-end
-
 post '/categories' do
   category = Category.new(params)
   category.save()

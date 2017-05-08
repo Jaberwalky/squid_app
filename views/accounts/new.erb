@@ -1,0 +1,13 @@
+<a href="/accounts"><input type="button" value="Back"></a>
+
+<h1>add a new account</h1>
+  <form action="/accounts" method="post">
+    <label for="name_field">Name</label>
+    <input type="text" id="name_field" name="name">
+    <label for="balance_field">Initial Balance</label>
+    <input type="number" step="0.01" id="balance_field" name="balance">
+    <% @card_images.each do |card| %>
+      <input type="radio" name="image" value="<%=card%>"><img src="<%=card%>">
+    <% end %>
+  <input type='submit' value="Save">
+</form>
