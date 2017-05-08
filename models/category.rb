@@ -48,4 +48,11 @@ class Category
     return Category.new(hash)
   end
 
+  def percentage_of_total
+    total_by_cat = self.total()
+    total = Transaction.total()
+    percentage = (total_by_cat / total) * 100
+    return percentage.to_i
+  end
+
 end

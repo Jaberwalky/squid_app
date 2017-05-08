@@ -16,6 +16,7 @@
       <h3><%=category.total()%></h3>
       <img src=<%=category.image%>>
       <p><%=category.name%></a>
+      <p><%=category.percentage_of_total()%>%</p>
     </a>
   <% end %>
   <a href="/categories/new"><input type="button" value="Add Category"></a>
