@@ -1,4 +1,4 @@
-
+<a href="/squid"><input type="button" value="Back"></a>
 
 <section>
   <% @categories.each do |category| %>
@@ -19,7 +19,6 @@
     <tr>
       <th>Transaction</th>
       <th>Amount</th>
-      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -27,7 +26,6 @@
       <tr>
         <td><%=transaction.name%></td>
         <td><%=transaction.formatted_amount%></td>
-        <td></td>
       </tr>
     <% end %>
   </tbody>
