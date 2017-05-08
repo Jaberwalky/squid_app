@@ -24,16 +24,34 @@ img {
 }
 
 .grid-col-lg {
-  flex: 8;
+  flex: 7;
   border: 1px black solid;
 }
 
 .grid-col-md {
   border: 1px black solid;
-  flex: 2;
+  flex: 3;
+  display: flex;
+  justify-content: space-around;
 }
 
+.grid-col-sm {
+  flex: 2;
+  display: flex;
+  border: 1px black solid;
+}
 
+.detailed_category_icons {
+  /*these are the groups of category images with icon, title, amount, percentage*/
+}
+
+.detailed-category-icons p {
+  margin: 3px;
+}
+
+.detailed-category-icons h3 {
+  margin: 0;
+}
 
 a {
   text-decoration: none;
@@ -53,8 +71,8 @@ table img {
 }
 
 th {
-    background-color: #47b2a3;
-    color: white;
+  background-color: #47b2a3;
+  color: white;
 }
 
 th, td {
@@ -66,20 +84,14 @@ th, td {
 /* footer button stylings */
 
 .bottom-button {
+  font-size: 5em;
   width:100%;
-}
-
-.detailed_category_icons img {
-  text-align: center;
-
-  /*these are the groups of category images with icon, title, amount, percentage*/
 }
 
 input.add{
   background-image:url(/images/plus_symbol.png);
   background-repeat:no-repeat;
   background-position: center;
-
   background-size: 30px;
   background-color: #47b2a3;
   color: #47b2a3;

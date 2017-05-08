@@ -1,5 +1,5 @@
 <div class="parent-flex-grid">
-  <div class="grid-col-md grid">
+  <div class="grid-col-sm grid">
     <section>
       <%@accounts.each do |account| %>
         <img src="<%=account.image%>"
@@ -21,8 +21,8 @@
           <a href="/categories/<%=category.id%>">
             <img src=<%=category.image%>>
           </a>
-          <p><%=category.name%></a>
-          <h3>£<%=category.total()%></h3>
+          <h3><%=category.name%></h3>
+          <p>£<%=category.total()%></p>
           <p><%=category.percentage_of_total()%>%</p>
         <% end %>
       </div>
