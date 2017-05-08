@@ -12,6 +12,9 @@ end
 
 post '/transactions' do
   transaction = Transaction.new(params)
+  @account = Account.find(params[:account_id])
+  @account.balance -= params[:amount].to_f
+  @account.update()
   transaction.save()
   redirect ('/squid')
 end
