@@ -4,6 +4,7 @@ header {
   margin-top: -40px;
   margin-bottom: 10px;
   width: 100%;
+
 }
 
 body {
@@ -26,6 +27,8 @@ aside {
 
 .parent-flex-grid {
   display: flex;
+  flex-flow: wrap;
+  height: 500px;
 }
 
 .grid {
@@ -37,6 +40,7 @@ aside {
 .grid-col-lg {
   flex: 7;
   display: flex;
+  flex-direction: column;
   /*border: 1px black solid;*/
 }
 
@@ -60,15 +64,17 @@ aside {
   flex: 3;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  overflow-y: scroll;
 }
 
-.detailed_category_icons {
+.detailed-category-icons {
   display: flex;
   flex-direction: row;
-  /*border: 1px solid #47b2a3;
-  border-radius: 20%;
-  padding: 20px;*/
+  border: 1px solid #47b2a3;
+  border-radius: 1em;
+  padding: 10px;
+  margin: 10px;
+  align-items: center;
   /*these are the groups of category images with icon, title, amount, percentage*/
 }
 
@@ -78,19 +84,25 @@ aside {
   /*border: 1px black solid;*/
 }
 
+img.cat-icon {
+  padding-left: 10px;
+}
+
 
 .delete-button-tr {
-  align-self: flex-end;
+  align-self: flex-end
 }
 
 .category-text {
   padding-left: 10px;
+  padding-right: 0;
   display: inline-block;
   text-align: center;
 }
 
 .detailed-category-icons p {
   margin: 3px;
+  padding-bottom: 0;
 }
 
 .detailed-category-icons h3 {
@@ -106,6 +118,7 @@ a {
 table {
   width:100%;
   border-collapse: collapse;
+  height: 50vh;
 }
 
 table img {
@@ -131,19 +144,7 @@ tfoot {
 
 /* footer button stylings */
 
-button.bottom-button {
-  margin-top: 30px;
-  width: 100%;
-  color: #47b2a3;
-  background-color: white;
-  border: solid 2px #47b2a3;
-  border-radius: 20px;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
+
 
 /* form stylings */
 
@@ -191,4 +192,40 @@ button.bottom-button {
 
 .form-container input[type=radio] {
   display: inline;
+}
+
+
+
+#bottom-bar {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+  margin-right: 10%;
+  margin-left: 10%;
+  width: 80%;
+  height: 60px;
+  background-color: #47b2a3;
+}
+
+button.bottom-button {
+  margin-top: 0px;
+  width: 100%;
+  color: #47b2a3;
+  background-color: white;
+  border: solid 2px #47b2a3;
+  border-radius: 20px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8em;
+}
+
+button.bottom-button:hover {
+  color: white;
+  background-color: #47b2a3;
 }

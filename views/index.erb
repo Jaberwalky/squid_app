@@ -3,7 +3,7 @@
     <section>
       <%@accounts.each do |account| %>
         <div class="account-detailed-icon">
-          <form action="/accounts/<%=account.id%>/delete" method="POST">
+          <form action="/accounts/<%=account.id%>/delete" method="POST" class="delete-button-tr">
             <input type="submit" value="X" class="delete-button-tr">
           </form>
           <img src="<%=account.image%>">
@@ -15,7 +15,6 @@
         </div>
 
       <%end%>
-      <a href="/accounts/new"><button class="bottom-button">Add Account</button></a>
     </section>
   </div>
 
@@ -31,9 +30,8 @@
             <p>£<%=category.total()%></p>
             <p><%=category.percentage_of_total()%>%</p>
           </div>
+        </div>
         <% end %>
-      </div>
-      <a href="/categories/new"><button class="bottom-button">Add Category</button></a>
     </section>
   </div>
 
@@ -66,7 +64,18 @@
           <td colspan="4"><%= Transaction.total %></td>
         </tfoot>
       </table>
-      <a href="/transactions/new"><button class="bottom-button">Add Transaction</button></a>
     </aside>
   </div>
+</div>
+
+<div id="bottom-bar">
+    <div class="grid-col-sm grid">
+      <a href="/accounts/new"><button class="bottom-button">+ Account</button></a>
+    </div>
+    <div class="grid-col-md grid">
+      <a href="/categories/new"><button class="bottom-button">+ Category</button></a>
+    </div>
+    <div class="grid-col-lg grid">
+      <a href="/transactions/new"><button class="bottom-button">+ Transaction</button></a>
+    </div>
 </div>

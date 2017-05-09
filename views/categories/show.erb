@@ -13,13 +13,15 @@
             <p>£<%=category.total()%></p>
             <p><%=category.percentage_of_total()%>%</p>
           </div>
+        </div>
         <% end %>
-      </div>
+      <a href="/categories/new"><button class="bottom-button">+ Category</button></a>
     </section>
   </div>
 
 
   <div class="grid-col-lg grid">
+    <img src="<%=@category.image%>" />
     <table>
       <thead>
         <tr>
