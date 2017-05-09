@@ -3,7 +3,7 @@ require 'sinatra/contrib/all'
 require_relative '../models/category.rb'
 
 get '/categories/new' do
-  @spare_images = ["/images/shirt.png","/images/shirt.png","/images/shirt.png","/images/shirt.png","/images/shirt.png"]
+  @spare_images = ["/images/ring.png","/images/glass.png","/images/label.png","/images/headphones.png","/images/shop.png"]
   erb(:"categories/new")
 end
 

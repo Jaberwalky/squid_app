@@ -8,9 +8,9 @@ header {
 
 body {
   font-family: 'Roboto', sans-serif;
-  width: 960px;
-  margin-left: auto;
-  margin-right: auto;
+  /*width: 960px;*/
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 img {
@@ -35,6 +35,21 @@ img {
   /*border: 1px black solid;*/
 }
 
+.account-detailed-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.account-text {
+  text-align: center;
+}
+
+.account-text h3{
+  margin: 0;
+}
+
 .grid-col-md {
   /*border: 1px black solid;*/
   flex: 3;
@@ -46,6 +61,9 @@ img {
 .detailed_category_icons {
   display: flex;
   flex-direction: row;
+  /*border: 1px solid #47b2a3;
+  border-radius: 20%;
+  padding: 20px;*/
   /*these are the groups of category images with icon, title, amount, percentage*/
 }
 
@@ -55,17 +73,6 @@ img {
   /*border: 1px black solid;*/
 }
 
-.account-detailed-icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid black;
-}
-/*
-.account-text h3{
-  margin: 0;
-  padding: 0;
-}*/
 
 .delete-button-tr {
   align-self: flex-end;
@@ -92,7 +99,6 @@ a {
 /* table stylings */
 
 table {
-  border-radius: 0 30px 0 0;
   width:100%;
   border-collapse: collapse;
 }
@@ -113,23 +119,16 @@ th, td {
   text-align: center;
 }
 
+tfoot {
+  background-color: #47b2a3;
+  color: white;
+}
+
 /* footer button stylings */
 
 .bottom-button {
   font-size: 5em;
-  width:100%;
-}
+  margin-top: 30px;
 
-input.add{
-  background-image:url(/images/plus_symbol.png);
-  background-repeat:no-repeat;
-  background-position: center;
-  background-size: 30px;
-  background-color: #47b2a3;
-  color: #47b2a3;
-  text-indent:-9999px;
-  width: 100%;
-  border-radius: 0 0 30px 0;
-  height: 50px;
-  border:2px solid #47b2a3;
+  
 }
