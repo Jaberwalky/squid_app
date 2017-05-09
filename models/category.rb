@@ -40,6 +40,7 @@ class Category
   def total()
     sql = "SELECT SUM(amount) AS total FROM transactions WHERE category_id = #{@id};"
     total = SqlRunner.run(sql).first["total"].to_f
+    # remember to add your display decimal function thingy.
   end
 
   def self.find(id_to_find)

@@ -1,6 +1,13 @@
+header {
+  background-color: #47b2a3;
+  height: 100px;
+  margin-top: -40px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
-  width: 1000px;
   width: 960px;
   margin-left: auto;
   margin-right: auto;
@@ -25,24 +32,49 @@ img {
 
 .grid-col-lg {
   flex: 7;
-  border: 1px black solid;
+  /*border: 1px black solid;*/
 }
 
 .grid-col-md {
-  border: 1px black solid;
+  /*border: 1px black solid;*/
   flex: 3;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
+}
+
+.detailed_category_icons {
+  display: flex;
+  flex-direction: row;
+  /*these are the groups of category images with icon, title, amount, percentage*/
 }
 
 .grid-col-sm {
   flex: 2;
   display: flex;
-  border: 1px black solid;
+  /*border: 1px black solid;*/
 }
 
-.detailed_category_icons {
-  /*these are the groups of category images with icon, title, amount, percentage*/
+.account-detailed-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+}
+/*
+.account-text h3{
+  margin: 0;
+  padding: 0;
+}*/
+
+.delete-button-tr {
+  align-self: flex-end;
+}
+
+.category-text {
+  padding-left: 10px;
+  display: inline-block;
+  text-align: center;
 }
 
 .detailed-category-icons p {
