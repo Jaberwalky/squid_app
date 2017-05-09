@@ -18,6 +18,10 @@ img {
   height: 50px;
 }
 
+aside {
+  width: 100%;
+}
+
 /* flex box stylings*/
 
 .parent-flex-grid {
@@ -32,6 +36,7 @@ img {
 
 .grid-col-lg {
   flex: 7;
+  display: flex;
   /*border: 1px black solid;*/
 }
 
@@ -126,9 +131,64 @@ tfoot {
 
 /* footer button stylings */
 
-.bottom-button {
-  font-size: 5em;
+button.bottom-button {
   margin-top: 30px;
+  width: 100%;
+  color: #47b2a3;
+  background-color: white;
+  border: solid 2px #47b2a3;
+  border-radius: 20px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 
-  
+/* form stylings */
+
+.form-container {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.form-container input {
+  border-radius: 20px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-color: #47b2a3;
+  border-style: solid;
+  font-size: 1.7em;
+}
+
+.form-container input:focus {
+  border: 3px solid #555;
+  outline: none;
+}
+
+.form-container select {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  height: 3em;
+  font-size: 1em;
+  border-radius: 30px;
+}
+
+.form-container input[type=submit] {
+  background-color: #47b2a3;
+  color: white;
+}
+
+.form-container input[type=radio] {
+  display: inline;
 }

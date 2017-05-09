@@ -4,13 +4,17 @@
   <div class="grid-col-md grid">
     <section>
       <% @categories.each do |category| %>
-        <a href="/categories/<%=category.id%>">
-          <h3><%=category.total()%></h3>
-          <img src=<%=category.image%>>
-          <p><%=category.name%></a>
-        </a>
-      <% end %>
-      <a href="/categories/new"><input type="button" value="Add Category"></a>
+        <div class="detailed-category-icons">
+          <a href="/categories/<%=category.id%>">
+            <img class="cat-icon" src=<%=category.image%>>
+          </a>
+          <div class="category-text">
+            <h3><%=category.name%></h3>
+            <p>£<%=category.total()%></p>
+            <p><%=category.percentage_of_total()%>%</p>
+          </div>
+        <% end %>
+      </div>
     </section>
   </div>
 
@@ -27,11 +31,15 @@
         <% @transactions.each do |transaction| %>
           <tr>
             <td><%=transaction.name%></td>
-            <td><%=transaction.formatted_amount%></td>
+            <td>£<%=transaction.formatted_amount%></td>
           </tr>
         <% end %>
       </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">£<%=@category.total%></td>
+        </tr>
+      </tfoot>
     </table>
-    <%=@category.total%>
   </div>
 </div>
