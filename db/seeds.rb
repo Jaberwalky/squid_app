@@ -23,14 +23,18 @@ category5 = Category.new({'name' => 'Shopping', 'image' => '/images/shopping.png
 category5.save()
 
 
-transaction1 = Transaction.new({'name' => 'Cleaning Supplies', 'amount' => 23.45, 'category_id' => category1.id, 'account_id' => account1.id})
+transaction1 = Transaction.new({'name' => 'New Jumper', 'amount' => 45.00, 'category_id' => category1.id, 'account_id' => account1.id})
 transaction1.save()
-transaction2 = Transaction.new({'name' => 'Burger with Lucy', 'amount' => 10.50, 'category_id' => category2.id, 'account_id' => account1.id})
+transaction2 = Transaction.new({'name' => 'Burger with Lucy', 'amount' => 27.50, 'category_id' => category2.id, 'account_id' => account1.id})
 transaction2.save()
-transaction3 = Transaction.new({'name' => 'Julias Birthday Party', 'amount' => 98.60, 'category_id' => category3.id, 'account_id' => account1.id})
+transaction3 = Transaction.new({'name' => 'Caramel Latte', 'amount' => 3.45, 'category_id' => category3.id, 'account_id' => account1.id})
 transaction3.save()
-# run category.all and show someone what happens!
-transaction4 = Transaction.new({'name' => 'Phone Bill', 'amount' => 34.27, 'category_id' => category4.id, 'account_id' => account1.id})
+transaction4 = Transaction.new({'name' => 'Food Shopping', 'amount' => 34.27, 'category_id' => category5.id, 'account_id' => account1.id})
+transaction4.save()
+
+transaction5 = Transaction.new({'name' => 'Frappuccino', 'amount' => 73.00, 'category_id' => category3.id, 'account_id' => account1.id})
+transaction5.save()
+transaction4 = Transaction.new({'name' => 'Dinner with Sarah', 'amount' => 62.30, 'category_id' => category2.id, 'account_id' => account1.id})
 transaction4.save()
 
 binding.pry
