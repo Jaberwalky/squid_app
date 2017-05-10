@@ -28,8 +28,7 @@
               <h3 id=<%="warning-text" if account.balance < 0 %> >£<%=account.formatted_balance%></h3>
             </div>
             <a href="/balance/<%=account.id%>/edit"><img src="/images/add_money.png" id="add-money-icon"></a>
-        </div>
-
+      </div>
       <%end%>
     </section>
   </div>
@@ -42,12 +41,6 @@
             <img class="cat-icon" src=<%=category.image%>>
           </a>
           <div class="category-text">
-
-
-
-
-
-
             <div class="box">
               <a href="#popup2"><img class="close" src="images/close_icon.png"></a>
             </div>
@@ -63,7 +56,6 @@
                 </div>
               </div>
             </div>
-
             <h3><%=category.name%></h3>
             <p>£<%=category.total()%></p>
             <p><%=category.percentage_of_total()%>%</p>
@@ -91,9 +83,13 @@
             <td><%=transaction.name%></td>
             <td>£<%=transaction.formatted_amount%></td>
             <td>
+
               <form action="/transactions/<%=transaction.id%>/delete" method="POST">
-                <input type="submit" value="delete" />
+                <input type="submit" value="Delete">
+
+                <img src="images/close_icon.png">
               </form>
+
             </td>
           </tr>
           <% end %>
@@ -107,6 +103,7 @@
 </div>
 
 <div id="bottom-bar">
+  <div id="bottom-bar-contents">
     <div class="grid-col-sm grid">
       <a href="/accounts/new"><button class="bottom-button">+ Account</button></a>
     </div>
@@ -116,4 +113,5 @@
     <div class="grid-col-lg grid">
       <a href="/transactions/new"><button class="bottom-button">+ Transaction</button></a>
     </div>
+  </div>
 </div>
