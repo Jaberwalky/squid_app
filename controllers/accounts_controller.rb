@@ -3,12 +3,12 @@ require 'sinatra/contrib/all'
 require_relative '../models/account.rb'
 
 get '/balance/:id/edit' do
-  @account = Account.find(:id)
+  @account = Account.find(params[:id])
   erb(:'balance/update')
 end
 
 post '/balance/:id' do
-  @account = Account.find(:id)
+  @account = Account.find(params[:id])
   @account.add_money(params[:amount_to_add].to_f)
   @account.update()
   redirect ('/squid')

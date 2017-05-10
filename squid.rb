@@ -7,6 +7,6 @@ require_relative 'controllers/accounts_controller.rb'
 get '/squid' do
   @categories = Category.all()
   @transactions = Transaction.all()
-  @accounts = Account.all()
+  @accounts = Account.all().sort_by {|account| account.id}
   erb(:index)
 end

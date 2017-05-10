@@ -32,6 +32,11 @@ class Category
     SqlRunner.run(sql).map {|category| Category.new(category)}
   end
 
+  def delete()
+    sql = "DELETE FROM categories WHERE id = #{@id}"
+    SqlRunner.run(sql)
+  end
+
   def transactions()
     sql = "SELECT * FROM transactions WHERE category_id = #{@id};"
     SqlRunner.run(sql).map{|transaction| Transaction.new(transaction)}

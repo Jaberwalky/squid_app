@@ -19,3 +19,9 @@ get '/categories/:id' do
   @transactions = @category.transactions()
   erb(:'categories/show')
 end
+
+post '/category/:id/delete' do
+  category = Category.find(:id)
+  category.delete()
+  redirect ('/squid')
+end

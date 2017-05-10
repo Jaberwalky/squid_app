@@ -9,9 +9,9 @@
           <img src="<%=account.image%>">
             <div class="account-text">
               <h3><%=account.name%></h3>
-              <h3>£<%=account.formatted_balance%></h3>
+              <h3 id=<%="warning-text" if account.balance < 0 %> >£<%=account.formatted_balance%></h3>
             </div>
-            <a href="/balance/<%=account.id%>/edit"><input type="button" value="Add Funds"></a>
+            <a href="/balance/<%=account.id%>/edit"><img src="/images/add_money.png" id="add-money-icon"></a>
         </div>
 
       <%end%>
@@ -26,6 +26,9 @@
             <img class="cat-icon" src=<%=category.image%>>
           </a>
           <div class="category-text">
+            <form action="/category/<%=category.id%>/delete" method="POST" class="delete-button-tr">
+              <input type="submit" value="X" class="delete-button-tr">
+            </form>
             <h3><%=category.name%></h3>
             <p>£<%=category.total()%></p>
             <p><%=category.percentage_of_total()%>%</p>

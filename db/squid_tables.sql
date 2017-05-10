@@ -1,6 +1,6 @@
+DROP TABLE transactions;
 DROP TABLE accounts;
 DROP TABLE categories;
-DROP TABLE transactions;
 
 CREATE TABLE accounts (
   id SERIAL8 PRIMARY KEY,
@@ -19,6 +19,6 @@ CREATE TABLE transactions (
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
   amount NUMERIC(8,2),
-  category_id INT4 REFERENCES categories(id),
-  account_id INT4 REFERENCES accounts(id)
+  category_id INT4 REFERENCES categories(id) ON DELETE CASCADE,
+  account_id INT4 REFERENCES accounts(id) ON DELETE CASCADE
 );

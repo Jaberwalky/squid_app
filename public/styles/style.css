@@ -4,7 +4,6 @@ header {
   margin-top: -40px;
   margin-bottom: 10px;
   width: 100%;
-
 }
 
 body {
@@ -12,6 +11,7 @@ body {
   /*width: 960px;*/
   margin-left: 10%;
   margin-right: 10%;
+  color: #333;
 }
 
 img {
@@ -80,7 +80,7 @@ aside {
 
 .grid-col-sm {
   flex: 2;
-  display: flex;
+  overflow-y: scroll;
   /*border: 1px black solid;*/
 }
 
@@ -88,6 +88,15 @@ img.cat-icon {
   padding-left: 10px;
 }
 
+#warning-text {
+  color: red;
+}
+
+#add-money-icon {
+  padding-top: 10px;
+  height: 2em;
+  width: 2em;
+}
 
 .delete-button-tr {
   align-self: flex-end
@@ -118,7 +127,6 @@ a {
 table {
   width:100%;
   border-collapse: collapse;
-  height: 50vh;
 }
 
 table img {
@@ -194,6 +202,10 @@ tfoot {
   display: inline;
 }
 
+.form-container label {
+  font-size: 1.5em;
+  text-align: center;
+}
 
 
 #bottom-bar {
@@ -227,5 +239,6 @@ button.bottom-button {
 
 button.bottom-button:hover {
   color: white;
+  border: solid 2px white;
   background-color: #47b2a3;
 }
