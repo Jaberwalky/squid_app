@@ -36,7 +36,7 @@ aside {
 .parent-flex-grid {
   display: flex;
   flex-flow: wrap;
-  height: 570px;
+  height: 575px;
 }
 
 .grid {
@@ -166,7 +166,7 @@ tfoot {
 /* form stylings */
 
 .form-container {
-  margin-top: 70px;
+  margin-top: 60px;
   width: 40%;
   margin-left: auto;
   margin-right: auto;
@@ -204,8 +204,15 @@ tfoot {
 }
 
 .form-container input[type=submit] {
+  height: 2em;
   background-color: #47b2a3;
   color: white;
+}
+
+.form-container input[type=submit]:hover {
+  background-color: white;
+  color: #47b2a3;
+  border: 3px solid #47b2a3;
 }
 
 .form-container label {
@@ -365,15 +372,15 @@ margin-top: 42px;
   align-self: flex-end;
 }
 
-.radio-icon > input { /* HIDE RADIO */
-  visibility: hidden; /* Makes input not-clickable */
-  position: absolute; /* Remove input from document flow */
+.radio-icon > input {
+  visibility: hidden;
+  position: absolute;
 }
-.radio-icon > input + img{ /* IMAGE STYLES */
+.radio-icon > input + img {
   cursor:pointer;
   border:2px solid transparent;
 }
-.radio-icon > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+.radio-icon > input:checked + img {
   border:1px solid #47b2a3;
   box-shadow: 0 0 8px 4px rgba(71, 168, 163, 0.8);
   border-radius: 30%;
