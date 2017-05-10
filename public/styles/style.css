@@ -7,6 +7,12 @@ header {
   margin-left: -200px;
 }
 
+h1 {
+  color: #47b2a3;
+  text-align: center;
+  margin-top: 2em;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   /*width: 960px;*/
@@ -53,6 +59,10 @@ aside {
   padding: 20px;
 }
 
+.account-detailed-icon .close {
+  justify-content: flex-end;
+}
+
 .account-text {
   text-align: center;
 }
@@ -77,6 +87,7 @@ aside {
   padding: 10px;
   margin: 10px;
   align-items: center;
+  justify-content: space-around;
   /*these are the groups of category images with icon, title, amount, percentage*/
 }
 
@@ -128,8 +139,8 @@ table {
 }
 
 table img {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 
 th {
@@ -155,7 +166,7 @@ tfoot {
 /* form stylings */
 
 .form-container {
-  margin-top: 100px;
+  margin-top: 70px;
   width: 40%;
   margin-left: auto;
   margin-right: auto;
@@ -164,11 +175,11 @@ tfoot {
 
 
 .form-container input {
-  border-radius: 20px;
+  border-radius: 10px;
   display: inline-block;
   width: 100%;
   text-align: center;
-  padding: 12px 20px;
+  /*padding: 12px 20px;*/
   margin: 8px 0;
   box-sizing: border-box;
   border-color: #47b2a3;
@@ -177,7 +188,7 @@ tfoot {
 }
 
 .form-container input:focus {
-  border: 3px solid #555;
+  border: 3px solid #47b2a3;
   outline: none;
 }
 
@@ -198,8 +209,10 @@ tfoot {
 }
 
 .form-container label {
+  margin-top: 20px;
   font-size: 1.5em;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .radio-icon {
@@ -211,6 +224,7 @@ tfoot {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin-top: 10px;
 }
 
 
@@ -253,6 +267,7 @@ button.bottom-button {
   text-decoration: none;
   display: inline-block;
   font-size: 1em;
+  margin-bottom: 5px;
 }
 
 button.bottom-button:hover {
@@ -262,8 +277,8 @@ button.bottom-button:hover {
 }
 
 .grid-col-lg input[type="image"] {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
 }
 
 .close {
@@ -273,7 +288,9 @@ button.bottom-button:hover {
 
 .box {
   padding: 0px;
-  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 .delete-button-tr {
@@ -331,4 +348,9 @@ button.bottom-button:hover {
 .popup .content {
   max-height: 30%;
   overflow: auto;
+}
+
+#squid_logo {
+margin-left: 200px;
+margin-top: 42px;
 }

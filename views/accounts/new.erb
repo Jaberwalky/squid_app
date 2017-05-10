@@ -1,18 +1,18 @@
-<a href="/squid"><img src="/images/back_icon.png"></a>
 
-  <h1>add a new account</h1>
+<h1>Add Account</h1>
+
   <div class="form-container">
     <form action="/accounts" method="post">
-      <label for="name_field">Name</label>
-      <input autofocus type="text" id="name_field" name="name">
-      <label for="balance_field">Initial Balance</label>
-      <input type="number" step="0.01" id="balance_field" name="balance">
-      <label for="card_images">Select a card style</label>
+      <label for="name_field">What would you like to name this account?</label>
+      <input autofocus required type="text" id="name_field" name="name">
+      <label for="balance_field">Initial Balance?</label>
+      <input required type="number" step="0.01" id="balance_field" name="balance">
+      <label for="card_images">Select a card style :</label>
       <div class="radio-icon-container">
         <% @card_images.each do |card| %>
           <div class="radio-icon">
             <img src="<%=card%>">
-            <input type="radio" id="card_images" name="image" value="<%=card%>">
+            <input required type="radio" id="card_images" name="image" value="<%=card%>">
           </div>
         <% end %>
       </div>
