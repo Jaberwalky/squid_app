@@ -7,9 +7,9 @@
 
 
           <div class="box">
-          	<a href="#popup1"><img class="close" src="images/close_icon.png"></a>
+          	<a href="#popup1/<%=account.id%>"><img class="close" src="images/close_icon.png"></a>
           </div>
-          <div id="popup1" class="overlay">
+          <div id="popup1/<%=account.id%>" class="overlay">
           	<div class="popup">
           		<h2>Are you sure?</h2>
           		<a class="close" href="#">&times;</a>
@@ -42,9 +42,9 @@
           </a>
           <div class="category-text">
             <div class="box">
-              <a href="#popup2"><img class="close" src="images/close_icon.png"></a>
+              <a href="#popup2/<%=category.id%>"><img class="close" src="images/close_icon.png"></a>
             </div>
-            <div id="popup2" class="overlay">
+            <div id="popup2/<%=category.id%>" class="overlay">
               <div class="popup">
                 <h2>Are you sure?</h2>
                 <a class="close" href="#">&times;</a>
