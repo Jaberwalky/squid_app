@@ -6,12 +6,13 @@
     <input autofocus required type="text" id="name_field" name="name">
 
     <label for="category-icons">Select an image for your category :</label>
+
     <div class="radio-icon-container">
       <% @spare_images.each do |image| %>
-        <div class="radio-icon">
+        <label class="radio-icon">
+          <input class="category-form-input"required type="radio" id="category-icons" name="image" value=<%=image%>/>
           <img src="<%=image%>">
-          <input required type="radio" id="category-icons" name="image" value=<%=image%>/>
-        </div>
+        </label>
       <% end %>
     </div>
 

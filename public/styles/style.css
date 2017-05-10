@@ -308,6 +308,8 @@ button.bottom-button:hover {
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
+  z-index: 1;
+  height: 200%;
 }
 
 .overlay:target {
@@ -357,4 +359,22 @@ margin-top: 42px;
 
 .submit-button {
   background-color: black;
+}
+
+#account-box {
+  align-self: flex-end;
+}
+
+.radio-icon > input { /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+.radio-icon > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+.radio-icon > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:1px solid #47b2a3;
+  box-shadow: 0 0 8px 4px rgba(71, 168, 163, 0.8);
+  border-radius: 30%;
 }
