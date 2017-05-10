@@ -21,7 +21,6 @@ get '/categories/:id' do
 end
 
 post '/category/:id/delete' do
-  category = Category.find(:id)
-  category.delete()
+  Category.delete_at_id(params[:id])
   redirect ('/squid')
 end

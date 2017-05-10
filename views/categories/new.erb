@@ -1,17 +1,20 @@
-<a href="/squid"><input type="button" value="Back"></a>
+<a href="/squid"><img src="/images/back_icon.png"></a>
 
 <h1>add a new category</h1>
 <div class="form-container">
   <form action="/categories" method="post">
     <label for="name_field">Name</label>
-    <input type="text" id="name_field" name="name">
+    <input autofocus type="text" id="name_field" name="name">
 
-
-    <% @spare_images.each do |image| %>
-      <input type="radio" name="image" value=<%=image%>/>
-      <img src="<%=image%>">
-    <% end %>
-
+    <label for="category-icons">Select an image for your category</label>
+    <div class="radio-icon-container">
+      <% @spare_images.each do |image| %>
+        <div class="radio-icon">
+          <img src="<%=image%>">
+          <input type="radio" id="category-icons" name="image" value=<%=image%>/>
+        </div>
+      <% end %>
+    </div>
 
     <input type='submit' value="Save">
   </form>

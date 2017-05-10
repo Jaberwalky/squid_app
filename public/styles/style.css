@@ -198,13 +198,20 @@ tfoot {
   color: white;
 }
 
-.form-container input[type=radio] {
-  display: inline;
-}
-
 .form-container label {
   font-size: 1.5em;
   text-align: center;
+}
+
+.radio-icon {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-icon-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 

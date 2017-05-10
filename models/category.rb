@@ -61,4 +61,9 @@ class Category
     return percentage.to_i
   end
 
+  def self.delete_at_id(id_to_delete)
+    sql = "DELETE FROM categories WHERE id = #{id_to_delete}"
+    SqlRunner.run(sql)
+  end
+
 end
