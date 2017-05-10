@@ -3,9 +3,25 @@
     <section>
       <%@accounts.each do |account| %>
         <div class="account-detailed-icon">
-          <form action="/accounts/<%=account.id%>/delete" method="POST" class="delete-button-tr">
-            <input type="submit" value="X" class="delete-button-tr">
-          </form>
+
+
+
+          <div class="box">
+          	<a href="#popup1"><img class="close" src="images/close_icon.png"></a>
+          </div>
+          <div id="popup1" class="overlay">
+          	<div class="popup">
+          		<h2>Are you sure?</h2>
+          		<a class="close" href="#">&times;</a>
+          		<div class="content">
+          			<p>Deleting a card will also delete all associated transactions from your transaction table. Are you sure you want to do this?</p>
+                <form action="/accounts/<%=account.id%>/delete" method="POST" class="delete-button-tr">
+                  <input type="submit" value="I'm Sure!" class="delete-button-tr">
+                </form>
+              </div>
+          	</div>
+          </div>
+
           <img src="<%=account.image%>">
             <div class="account-text">
               <h3><%=account.name%></h3>
@@ -26,9 +42,28 @@
             <img class="cat-icon" src=<%=category.image%>>
           </a>
           <div class="category-text">
-            <form action="/category/<%=category.id%>/delete" method="POST" class="delete-button-tr">
-              <input type="submit" value="X" class="delete-button-tr">
-            </form>
+
+
+
+
+
+
+            <div class="box">
+              <a href="#popup2"><img class="close" src="images/close_icon.png"></a>
+            </div>
+            <div id="popup2" class="overlay">
+              <div class="popup">
+                <h2>Are you sure?</h2>
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                  <p>Deleting a category will also delete all associated transactions from your transaction table. Are you sure you want to do this?</p>
+                  <form action="/category/<%=category.id%>/delete" method="POST" class="delete-button-tr">
+                    <input type="submit" value="I'm Sure!" class="delete-button-tr">
+                  </form>
+                </div>
+              </div>
+            </div>
+
             <h3><%=category.name%></h3>
             <p>£<%=category.total()%></p>
             <p><%=category.percentage_of_total()%>%</p>

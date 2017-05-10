@@ -4,6 +4,7 @@ header {
   margin-top: -40px;
   margin-bottom: 10px;
   width: 100%;
+
 }
 
 body {
@@ -28,7 +29,7 @@ aside {
 .parent-flex-grid {
   display: flex;
   flex-flow: wrap;
-  height: 500px;
+  height: 580px;
 }
 
 .grid {
@@ -96,10 +97,6 @@ img.cat-icon {
   padding-top: 10px;
   height: 2em;
   width: 2em;
-}
-
-.delete-button-tr {
-  align-self: flex-end
 }
 
 .category-text {
@@ -248,4 +245,71 @@ button.bottom-button:hover {
   color: white;
   border: solid 2px white;
   background-color: #47b2a3;
+}
+
+.close {
+  height:20px;
+  width: 20px;
+}
+
+.box {
+  padding: 0px;
+  align-self: flex-end;
+}
+
+.delete-button-tr {
+  align-self: flex-end;
+  text-align: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 200px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  border: 5px solid #47b2a3;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+  text-align: center;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
 }
